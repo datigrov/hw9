@@ -10,6 +10,8 @@ public class Main {
         Author nikolayOstrovskiy = new Author("Николай", "Островский");
         Book book1 = new Book("Как закалялась сталь", nikolayOstrovskiy, 1934);
 
+        book1.setPublicationYear(1955);
+
 
     }
 }
