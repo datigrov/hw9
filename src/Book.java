@@ -1,4 +1,5 @@
 import javax.xml.namespace.QName;
+import java.util.Objects;
 
 public class Book {
     private String name;
@@ -30,22 +31,24 @@ public class Book {
         return publicationYear;
     }
 
-    public String toString() {
-        return "Книга : " + this.name + "." + " Год публикации : " + this.publicationYear;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return publicationYear == book.publicationYear;
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hashCode(publicationYear);
+        return Objects.hash(publicationYear);
     }
 
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (!(o instanceof Book))
-            return false;
-        return false;
+    public String toString() {
+        return "Книга : " + this.name + "." + " Год публикации : " + this.publicationYear;
     }
+
+
 
 }
 
