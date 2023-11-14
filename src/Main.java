@@ -12,6 +12,13 @@ public class Main {
 
         book1.setPublicationYear(1955);
 
+        System.out.println(book1);
+        System.out.println(danSimmons);
+
+        System.out.println(book.equals(book1));
+        System.out.println(danSimmons.equals(danSimmons));
+
+
 
     }
 }
